@@ -6,17 +6,54 @@
     <title>Community Event Portal</title>
     <style>
 
+.register-banner{
+    text-align:center;
+    margin:30px 0;
+}
+
+.register-banner h2{
+    color:#333;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.register-banner p{
+    color:#666;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.register-btn{
+    display:inline-block;
+    text-decoration:none;
+    background-color:blue;
+    color:white;
+    padding:12px 25px;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+
+}
+
+.register-btn:hover{
+    background-color:darkblue;
+}
+
     #welcomeBanner{
         background-color:blue;
         color:white;
         padding:17px;
         text-align:center;
+        text-shadow:2px 1px 4px black;
     }   
 
+    
+
     .highlight{
-        background-color:rgb(77, 77, 41);
+        background-color:rgb(244, 248, 250);
         font-weight:bold;
-        color:gold;
+        color:black;
+        
     }
 
     .gallery-img{
@@ -29,6 +66,17 @@
     </style>
 </head>
 
+<script>
+function showMessage(event){
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+
+    document.getElementById("confirmation").value =
+        "Thank you, " + name + "! Your registration has been submitted successfully.";
+}
+</script>
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -36,6 +84,7 @@
         <a href="#events">Events</a>
         <a href="#contact">Contact</a>
         <a href="help.html" target="_blank">help</a>
+        
     </nav>
 
     <!-- Main -->
@@ -44,7 +93,12 @@
        <div id="welcomeBanner">
         <h2>Welcome, User!</h2>
         <p>We are happy to have you in our portal.</p>
-        <p class="highlight">New events have been added this week.</p>
+        <p class="highlight">Explore Events ! and Register to participate !!.</p>
+        <p>
+    <span style="color:rgb(0, 255, 115);font-weight:bold;">
+        Special Offer: Register today and get free event tickets!
+    </span>
+</p>
        </div>
     </section>
     
@@ -109,6 +163,20 @@
         </td>
     </tr>
 </table>
+
+</section>
+
+<section class="register-banner">
+    <h2>Register for Upcoming Events</h2>
+
+    <p>
+        Join exciting community activities, workshops,
+        wellness camps and festival celebrations.
+    </p>
+
+    <a href="register.html" class="register-btn">
+        Register Now
+    </a>
 
 </section>
   </main>
