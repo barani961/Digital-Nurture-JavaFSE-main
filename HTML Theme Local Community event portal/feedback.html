@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Feedback</title>
+</head>
+
+<body>
+
+<h1>Event Feedback</h1>
+
+<label>Phone Number:</label>
+<input type="text"
+       id="phone"
+       onblur="validatePhone()">
+
+<p id="phoneMsg"></p>
+
+<br>
+
+<label>Select Event:</label>
+
+<select id="eventType"
+        onchange="showFee()">
+
+    <option value="">Choose Event</option>
+    <option value="cleanup">Clean-Up Drive</option>
+    <option value="farmers">Farmers Market</option>
+    <option value="wellness">Wellness Camp</option>
+    <option value="stem">STEM Workshop</option>
+    <option value="deepavali">Deepavali Festival</option>
+    <option value="pet">Pet Adoption Fair</option>
+
+</select>
+
+<p id="fee"></p>
+
+<br>
+
+<img id="eventImage"
+     src="images/cleanup.jpg"
+     width="250"
+     ondblclick="enlarge(this)">
+
+<br><br>
+
+<textarea id="feedback"
+          rows="5"
+          cols="40"
+          onkeyup="countChars()"
+          placeholder="Enter feedback">
+</textarea>
+
+<p>
+Characters:
+<span id="count">0</span>
+</p>
+
+<button onclick="submitFeedback()">
+    Submit Feedback
+</button>
+
+<script>
+
+function validatePhone(){
+
+    let phone =
+    document.getElementById("phone").value;
+
+    let pattern=/^[0-9]{10}$/;
+
+    if(pattern.test(phone))
+        document.getElementById("phoneMsg").innerHTML =
+        "Valid Number✅";
+    else
+        document.getElementById("phoneMsg").innerHTML =
+        "Invalid Number❌";
+}
+
+function showFee(){
+
+    let event =
+    document.getElementById("eventType").value;
+
+    let image =
+    document.getElementById("eventImage");
+
+    if(event=="cleanup"){
+        document.getElementById("fee").innerHTML =
+        "Event Fee: ₹100";
+
+        image.src="images/cleanup.jpg";
+    }
+
+    else if(event=="farmers"){
+        document.getElementById("fee").innerHTML =
+        "Event Fee: ₹200";
+
+        image.src="images/farmers-market.jpg";
+    }
+
+    else if(event=="wellness"){
+        document.getElementById("fee").innerHTML =
+        "Event Fee: ₹300";
+
+        image.src="images/wellness-camp.jpg";
+    }
+
+    else if(event=="stem"){
+        document.getElementById("fee").innerHTML =
+        "Event Fee: ₹400";
+
+        image.src="images/stem-workshop.jpg";
+    }
+
+    else if(event=="deepavali"){
+        document.getElementById("fee").innerHTML =
+        "Event Fee: ₹500";
+
+        image.src="images/deepavali-festival.jpg";
+    }
+
+    else if(event=="pet"){
+        document.getElementById("fee").innerHTML =
+        "Event Fee: ₹150";
+
+        image.src="images/pet-adoption.jpg";
+    }
+}
+
+function submitFeedback(){
+
+    alert("Feedback Submitted Successfully");
+}
+
+function enlarge(img){
+
+    if(img.style.width=="400px"){
+        img.style.width="250px";
+    }
+    else{
+        img.style.width="400px";
+    }
+}
+
+
+function countChars(){
+
+    let text =
+    document.getElementById("feedback").value;
+
+    document.getElementById("count").innerHTML =
+    text.length;
+}
+
+</script>
+
+</body>
+</html>

@@ -73,19 +73,6 @@
         }
 
     </style>
-
-    <script>
-        function showMessage(event){
-            event.preventDefault();
-
-            let name = document.getElementById("name").value;
-
-            document.getElementById("confirmation").value =
-            "Thank You " + name +
-            "! Your registration has been submitted successfully.";
-        }
-    </script>
-
 </head>
 
 <body>
@@ -96,43 +83,74 @@
 
         <form onsubmit="showMessage(event)">
 
-            <div class="form-group">
+          <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text"
                        id="name"
                        placeholder="Enter your full name"
                        required
                        autofocus>
-            </div>
+          </div>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email"
-                       id="email"
-                       placeholder="Enter your email address"
-                       required>
-            </div>
 
-            <div class="form-group">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email"
+           id="email"
+           placeholder="Enter your email address"
+           required>
+          </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+
+            <input type="text"
+                id="phone"
+                placeholder="Enter 10 digit phone number"
+                onblur="validatePhone()">
+        </div>
+
+        <div class="form-group">
                 <label for="date">Event Date</label>
                 <input type="date"
                        id="date"
                        required>
-            </div>
+        </div>
 
-            <div class="form-group">
+        <div class="form-group">
                 <label for="eventType">Event Type</label>
 
-                <select id="eventType" required>
-                    <option value="">-- Select Event --</option>
-                    <option>Community Clean-Up Drive</option>
-                    <option>Local Farmers Market</option>
-                    <option>Senior Citizen Wellness Camp</option>
-                    <option>STEM Workshop for Kids</option>
-                    <option>Deepavali Festival Celebration</option>
-                    <option>Pet Adoption Fair</option>
+               <select id="eventType"
+        required
+        onchange="showFee()">
+                   <option value="">-- Select Event --</option>
+
+<option value="100">
+    Community Clean-Up Drive
+</option>
+
+<option value="150">
+    Local Farmers Market
+</option>
+
+<option value="200">
+    Senior Citizen Wellness Camp
+</option>
+
+<option value="250">
+    STEM Workshop for Kids
+</option>
+
+<option value="300">
+    Deepavali Festival Celebration
+</option>
+
+<option value="120">
+    Pet Adoption Fair
+</option>
                 </select>
-            </div>
+                <p id="feeDisplay"></p>
+        </div>
 
             <div class="form-group">
                 <label for="message">Message</label>
