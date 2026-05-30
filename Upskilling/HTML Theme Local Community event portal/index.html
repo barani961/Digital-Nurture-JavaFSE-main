@@ -196,6 +196,20 @@ nav a:hover{
 
 </section>
 
+<section id="promo-video">
+
+    <h2 style="text-align:center;">Upcoming Event Promo</h2>
+
+    <div style="text-align: center;">
+    <video id="eventVideo" controls autoplay muted width="400" height="300">
+        <source src="videos/event-promo.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+   
+
+    <p id="videoMessage"></p>
+     </div>
+</section>
 
 <section class="action-section">
 
@@ -234,5 +248,22 @@ nav a:hover{
     </section>
 </footer>
 
+<script>
+
+let video = document.getElementById("eventVideo");
+
+
+video.oncanplay = function()
+{
+    document.getElementById("videoMessage").innerHTML =
+    "Soccer Tournament are you ready to play!";
+};
+
+window.onbeforeunload = function()
+{
+    return "Are you sure you want to leave this page?";
+};
+
+</script>
 </body>
 </html>
