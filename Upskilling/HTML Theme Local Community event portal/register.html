@@ -121,8 +121,7 @@
                 <label for="eventType">Event Type</label>
 
                <select id="eventType"
-        required
-        onchange="showFee()">
+        onchange="savePreference();">
                    <option value="">-- Select Event --</option>
 
 <option value="100">
@@ -158,10 +157,15 @@
                 <textarea id="message"
                           rows="4"
                           placeholder="Enter your message"
-                          required></textarea>
+                          required
+          onkeyup="saveMessage()"></textarea>
             </div>
 
-            <button type="submit">Register</button>
+<button type="submit">Register</button>
+           <button type="button"
+        onclick="clearPreferences()">
+    Clear Preferences
+</button>
 
             <output id="confirmation"></output>
 
@@ -173,5 +177,69 @@
 
     </div>
 
+    <script>
+function savePreference(){
+
+    let eventType =
+    document.getElementById("eventType").value;
+
+    localStorage.setItem(
+        "preferredEvent",
+        eventType
+    );
+}
+
+
+function saveMessage(){
+
+    let msg =
+    document.getElementById("message").value;
+
+    sessionStorage.setItem(
+        "userMessage",
+        msg
+    );
+}
+
+window.onload = function(){
+
+    let savedEvent =
+    localStorage.getItem("preferredEvent");
+
+    if(savedEvent){
+
+        document.getElementById("eventType").value =
+        savedEvent;
+
+        showFee();
+    }
+};
+
+function clearPreferences(){
+
+    localStorage.clear();
+
+    sessionStorage.clear();
+
+    alert("Preferences Cleared");
+}
+
+function showMessage(event){
+
+    event.preventDefault();
+
+    console.log("Form Submitted");
+
+    console.log("Preferred Event:",
+        localStorage.getItem("preferredEvent"));
+
+    console.log("User Message:",
+        sessionStorage.getItem("userMessage"));
+
+    document.getElementById("confirmation").value =
+    "Registration Successful!";
+}
+
+</script>
 </body>
 </html>

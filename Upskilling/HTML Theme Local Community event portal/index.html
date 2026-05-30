@@ -211,6 +211,24 @@ nav a:hover{
      </div>
 </section>
 
+<section id="locationSection">
+
+    <h2 style="text-align:center;">
+        Find Nearby Events
+    </h2>
+
+    <div style="text-align:center;">
+
+        <button onclick="findLocation()">
+            Find Nearby Events
+        </button>
+
+        <p id="locationResult"></p>
+
+    </div>
+
+</section>
+
 <section class="action-section">
 
     <div class="action-box">
@@ -263,6 +281,62 @@ window.onbeforeunload = function()
 {
     return "Are you sure you want to leave this page?";
 };
+
+function findLocation()
+{
+    if(navigator.geolocation)
+    {
+        navigator.geolocation.getCurrentPosition(
+            showPosition,
+            showError,
+            {
+                enableHighAccuracy:true,
+                timeout:10000,
+                maximumAge:0
+            }
+        );
+    }
+    else
+    {
+        document.getElementById("locationResult").innerHTML =
+        "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position)
+{
+    document.getElementById("locationResult").innerHTML =
+    "Latitude: " +
+    position.coords.latitude +
+    "<br>Longitude: " +
+    position.coords.longitude;
+}
+
+function showError(error)
+{
+    let message="";
+
+    switch(error.code)
+    {
+        case error.PERMISSION_DENIED:
+            message="Location permission denied.";
+            break;
+
+        case error.POSITION_UNAVAILABLE:
+            message="Location information unavailable.";
+            break;
+
+        case error.TIMEOUT:
+            message="Request timed out.";
+            break;
+
+        default:
+            message="Unknown error occurred.";
+    }
+
+    document.getElementById("locationResult").innerHTML =
+    message;
+}
 
 </script>
 </body>

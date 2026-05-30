@@ -129,9 +129,25 @@ function showFee(){
 
 function submitFeedback(){
 
-    alert("Feedback Submitted Successfully");
-}
+    let event =
+    document.getElementById("eventType");
 
+    let eventName =
+    event.options[event.selectedIndex].text;
+
+    let review =
+    document.getElementById("feedback").value;
+
+    console.log("Feedback Form Received");
+    console.log("Event:", eventName);
+    console.log("Review:", review);
+
+    alert(
+        "Feedback Submitted Successfully\n\n" +
+        "Event: " + eventName +
+        "\nReview: " + review
+    );
+}
 function enlarge(img){
 
     if(img.style.width=="400px"){
