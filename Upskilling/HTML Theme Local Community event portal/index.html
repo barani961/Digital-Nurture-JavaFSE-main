@@ -2,274 +2,199 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
     <title>Community Event Portal</title>
-    <style>
-
-.action-section{
-    display:flex;
-    justify-content:space-around;
-    align-items:center;
-    margin:50px 0;
-    text-align:center;
-}
-
-.action-box{
-    width:40%;
-}
-
-.action-box h2{
-    color:#333;
-    margin-bottom:10px;
-}
-
-.action-box p{
-    color:#666;
-    margin-bottom:20px;
-}
-
-.register-btn{
-    display:inline-block;
-    text-decoration:none;
-    background-color:blue;
-    color:white;
-    padding:12px 25px;
-    border-radius:10px;
-    font-size:18px;
-    font-weight:bold;
-    margin:10px;
-}
-
-
-.register-btn:hover{
-    background-color:darkblue;
-}
-
-    #welcomeBanner{
-        background-color:blue;
-        color:white;
-        padding:17px;
-        text-align:center;
-        text-shadow:2px 1px 4px black;
-    }   
-
-    
-
-    .highlight{
-        background-color:rgb(244, 248, 250);
-        font-weight:bold;
-        color:black;
-        
-    }
-
- .gallery-img{
-    width:220px;
-    height:180px;
-    object-fit:cover;
-    border:4px solid black;
-    border-radius:12px;
-}
-table{
-    margin:auto;
-    border-spacing:30px;
-}
-
-td{
-    text-align:center;
-    font-weight:bold;
-}
-
-nav{
-    display:flex;
-    
-    background-color:#333333;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    padding:14px 20px;
-}
-
-nav a:hover{
-    background-color:#111111;
-}
-.gallery-item p{
-    margin-top:10px;
-    font-weight:bold;
-}
-
-    </style>
 </head>
+<style>
+body{
+    background-color:#f4f4f4;
+}
+</style>
 
 <body>
+
     <!-- Navigation -->
     <nav>
         <a href="#home">Home</a>
-       <a href="#events">Events</a>
+        <a href="#events">Events</a>
         <a href="#contact">Contact</a>
-        <a href="help.html" target="_blank">help</a>
-        
+        <a href="help.html" target="_blank">Help</a>
     </nav>
 
     <!-- Main -->
- <main>
-    <section id="home">
-       <div id="welcomeBanner">
-        <h2>Welcome, User!</h2>
-        <p>We are happy to have you in our portal.</p>
-        <p class="highlight">Explore Events ! and Register to participate !!.</p>
-        <p>
-    <span style="color:rgb(0, 255, 115);font-weight:bold;">
-        Special Offer: Register today and get free event tickets!
-    </span>
-</p>
-       </div>
-    </section>
-    
+    <main>
 
-    <section id="events">
+        <section id="home">
+            <div id="welcomeBanner">
+                <h2>Welcome, User!</h2>
 
-    <h2>Past Community Events</h2>
+                <p>We are happy to have you in our portal.</p>
 
-    <table>
+                <p class="highlight">
+                    Explore Events ! and Register to participate !!.
+                </p>
 
-        <tr>
-            <td>
-                <img src="images/cleanup.jpg"
-                     alt="Community Clean-Up Drive"
-                     title="Community Clean-Up Drive"
-                     class="gallery-img">
-                <br>
-                Community Clean-Up Drive
-            </td>
+                <p>
+                    <span class="special-offer">
+                        Special Offer: Register today and get free event tickets!
+                    </span>
+                </p>
+            </div>
+        </section>
 
-            <td>
-                <img src="images/farmers-market.jpg"
-                     alt="Local Farmers Market"
-                     title="Local Farmers Market"
-                     class="gallery-img">
-                <br>
-                Local Farmers Market
-            </td>
+        <section id="events">
 
-            <td>
-                <img src="images/wellness-camp.jpg"
-                     alt="Senior Citizen Wellness Camp"
-                     title="Senior Citizen Wellness Camp"
-                     class="gallery-img">
-                <br>
-                Senior Citizen Wellness Camp
-            </td>
-        </tr>
+           <h2 style="color:red;">Past Community Events</h2>
 
-        <tr>
-            <td>
-                <img src="images/stem-workshop.jpg"
-                     alt="STEM Workshop for Kids"
-                     title="STEM Workshop for Kids"
-                     class="gallery-img">
-                <br>
-                STEM Workshop for Kids
-            </td>
+            <table>
 
-            <td>
-                <img src="images/deepavali-festival.jpg"
-                     alt="Deepavali Festival Celebration"
-                     title="Deepavali Festival Celebration"
-                     class="gallery-img">
-                <br>
-                Deepavali Festival Celebration
-            </td>
+                <tr>
+                    <td>
+                        <img src="images/cleanup.jpg"
+                             alt="Community Clean-Up Drive"
+                             title="Community Clean-Up Drive"
+                             class="gallery-img">
+                        <br>
+                        Community Clean-Up Drive
+                    </td>
 
-            <td>
-                <img src="images/pet-adoption.jpg"
-                     alt="Pet Adoption Fair"
-                     title="Pet Adoption Fair"
-                     class="gallery-img">
-                <br>
-                Pet Adoption Fair
-            </td>
-        </tr>
+                    <td>
+                        <img src="images/farmers-market.jpg"
+                             alt="Local Farmers Market"
+                             title="Local Farmers Market"
+                             class="gallery-img">
+                        <br>
+                        Local Farmers Market
+                    </td>
 
-    </table>
+                    <td>
+                        <img src="images/wellness-camp.jpg"
+                             alt="Senior Citizen Wellness Camp"
+                             title="Senior Citizen Wellness Camp"
+                             class="gallery-img">
+                        <br>
+                        Senior Citizen Wellness Camp
+                    </td>
+                </tr>
 
-</section>
+                <tr>
+                    <td>
+                        <img src="images/stem-workshop.jpg"
+                             alt="STEM Workshop for Kids"
+                             title="STEM Workshop for Kids"
+                             class="gallery-img">
+                        <br>
+                        STEM Workshop for Kids
+                    </td>
 
-<section id="promo-video">
+                    <td>
+                        <img src="images/deepavali-festival.jpg"
+                             alt="Deepavali Festival Celebration"
+                             title="Deepavali Festival Celebration"
+                             class="gallery-img">
+                        <br>
+                        Deepavali Festival Celebration
+                    </td>
 
-    <h2 style="text-align:center;">Upcoming Event Promo</h2>
+                    <td>
+                        <img src="images/pet-adoption.jpg"
+                             alt="Pet Adoption Fair"
+                             title="Pet Adoption Fair"
+                             class="gallery-img">
+                        <br>
+                        Pet Adoption Fair
+                    </td>
+                </tr>
 
-    <div style="text-align: center;">
-    <video id="eventVideo" controls autoplay muted width="400" height="300">
-        <source src="videos/event-promo.mp4" type="video/mp4">
-        Your browser does not support video.
-    </video>
-   
+            </table>
 
-    <p id="videoMessage"></p>
-     </div>
-</section>
+        </section>
 
-<section id="locationSection">
+        <section id="promo-video">
 
-    <h2 style="text-align:center;">
-        Find Nearby Events
-    </h2>
+            <h2 class="center-text">
+                Upcoming Event Promo
+            </h2>
 
-    <div style="text-align:center;">
+            <div class="center-text">
 
-        <button onclick="findLocation()">
-            Find Nearby Events
-        </button>
+                <video id="eventVideo" controls autoplay muted width="400" height="300">
+                    <source src="videos/event-promo.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
 
-        <p id="locationResult"></p>
+                <p id="videoMessage"></p>
 
-    </div>
+            </div>
 
-</section>
+        </section>
 
-<section class="action-section">
+        <section id="locationSection">
 
-    <div class="action-box">
-        <h2>Register for Upcoming Events</h2>
+            <h2 class="center-text">
+                Find Nearby Events
+            </h2>
 
-        <p>
-            Join exciting community activities,
-            workshops and celebrations.
-        </p>
+            <div class="center-text">
 
-        <a href="register.html" class="register-btn">
-            Register Now
-        </a>
-    </div>
+                <button onclick="findLocation()">
+                    Find Nearby Events
+                </button>
 
-    <div class="action-box">
-        <h2>Give Your Feedback</h2>
+                <p id="locationResult"></p>
 
-        <p>
-            Share your experience and help us
-            improve future events.
-        </p>
+            </div>
 
-        <a href="feedback.html" class="register-btn">
-            Feedback
-        </a>
-    </div>
+        </section>
 
-</section>
-  <!-- Footer -->
-<footer>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>contact@community.com</p>
-    </section>
-</footer>
+        <section class="action-section">
+
+            <div class="action-box">
+
+                <h2>Register for Upcoming Events</h2>
+
+                <p>
+                    Join exciting community activities,
+                    workshops and celebrations.
+                </p>
+
+                <a href="register.html" class="register-btn">
+                    Register Now
+                </a>
+
+            </div>
+
+            <div class="action-box">
+
+                <h2>Give Your Feedback</h2>
+
+                <p>
+                    Share your experience and help us
+                    improve future events.
+                </p>
+
+                <a href="feedback.html" class="register-btn">
+                    Feedback
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>contact@community.com</p>
+        </section>
+    </footer>
 
 <script>
 
 let video = document.getElementById("eventVideo");
-
 
 video.oncanplay = function()
 {
@@ -314,24 +239,24 @@ function showPosition(position)
 
 function showError(error)
 {
-    let message="";
+    let message = "";
 
     switch(error.code)
     {
         case error.PERMISSION_DENIED:
-            message="Location permission denied.";
+            message = "Location permission denied.";
             break;
 
         case error.POSITION_UNAVAILABLE:
-            message="Location information unavailable.";
+            message = "Location information unavailable.";
             break;
 
         case error.TIMEOUT:
-            message="Request timed out.";
+            message = "Request timed out.";
             break;
 
         default:
-            message="Unknown error occurred.";
+            message = "Unknown error occurred.";
     }
 
     document.getElementById("locationResult").innerHTML =
@@ -339,5 +264,6 @@ function showError(error)
 }
 
 </script>
+
 </body>
 </html>
