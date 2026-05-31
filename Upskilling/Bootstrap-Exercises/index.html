@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Exercises</title>
+
+```
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Bootstrap Icons CDN -->
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+```
+
+</head>
+<body>
+
+<div class="container my-5">
+
+```
+<h1 class="display-3 text-center text-primary mb-5">
+    Bootstrap 5 Exercises
+</h1>
+
+<!-- Grid Layout -->
+<section class="mb-5">
+    <h2>Responsive Grid Layout</h2>
+
+    <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="bg-primary text-white p-3 text-center">
+                Column 1
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="bg-success text-white p-3 text-center">
+                Column 2
+            </div>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-4">
+            <div class="bg-danger text-white p-3 text-center">
+                Column 3
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sidebar Layout -->
+<section class="mb-5">
+    <h2>Sidebar Layout</h2>
+
+    <div class="row">
+        <div class="col-md-3 bg-dark text-white p-4">
+            Sidebar
+        </div>
+
+        <div class="col-md-9 bg-light p-4">
+            Main Content Area
+        </div>
+    </div>
+</section>
+
+<!-- Four Columns -->
+<section class="mb-5">
+    <h2>Four Equal Columns</h2>
+
+    <div class="row">
+        <div class="col-sm-3 bg-primary text-white p-3">1</div>
+        <div class="col-sm-3 bg-success text-white p-3">2</div>
+        <div class="col-sm-3 bg-warning p-3">3</div>
+        <div class="col-sm-3 bg-danger text-white p-3">4</div>
+    </div>
+</section>
+
+<!-- Alignment -->
+<section class="mb-5">
+    <h2>Alignment Utilities</h2>
+
+    <div class="row justify-content-center align-items-center bg-light"
+         style="height:250px;">
+        <div class="col-4 bg-info text-center p-4">
+            Centered Content
+        </div>
+    </div>
+</section>
+
+<!-- Reorder -->
+<section class="mb-5">
+    <h2>Column Reordering</h2>
+
+    <div class="row">
+        <div class="col-md-6 order-md-2 bg-primary text-white p-3">
+            First Column
+        </div>
+
+        <div class="col-md-6 order-md-1 bg-success text-white p-3">
+            Second Column
+        </div>
+    </div>
+</section>
+
+<!-- Flexbox -->
+<section class="mb-5">
+    <h2>Responsive Flexbox Navbar</h2>
+
+    <div class="d-flex flex-column flex-md-row bg-dark p-3">
+        <a href="#" class="text-white me-3">Home</a>
+        <a href="#" class="text-white me-3">About</a>
+        <a href="#" class="text-white">Contact</a>
+    </div>
+</section>
+
+<!-- Card Layout -->
+<section class="mb-5">
+    <h2>Flexbox Card</h2>
+
+    <div class="card p-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <h4>Product</h4>
+            <button class="btn btn-primary">Buy</button>
+        </div>
+    </div>
+</section>
+
+<!-- Typography -->
+<section class="mb-5">
+    <h2>Typography</h2>
+
+    <h1 class="display-1">Display Heading</h1>
+    <p class="lead">Lead Paragraph</p>
+    <p class="text-muted">Muted Text</p>
+    <p class="fw-bold">Bold Text</p>
+
+    <p class="text-uppercase">uppercase text</p>
+    <p class="text-lowercase">LOWERCASE TEXT</p>
+    <p class="text-capitalize">hello bootstrap world</p>
+</section>
+
+<!-- Forms -->
+<section class="mb-5">
+    <h2>Registration Form</h2>
+
+    <form>
+        <input type="text"
+               class="form-control mb-3"
+               placeholder="Name">
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">@</span>
+            <input type="email"
+                   class="form-control"
+                   placeholder="Email">
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">
+                Accept Terms
+            </label>
+        </div>
+    </form>
+
+    <h3 class="mt-4">Login Form</h3>
+
+    <div class="form-floating">
+        <input type="email"
+               class="form-control"
+               placeholder="Email">
+        <label>Email</label>
+    </div>
+</section>
+
+<!-- Buttons -->
+<section class="mb-5">
+    <h2>Buttons</h2>
+
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-success">Success</button>
+    <button class="btn btn-danger">Danger</button>
+    <button class="btn btn-warning">Warning</button>
+    <button class="btn btn-info">Info</button>
+    <button class="btn btn-outline-primary">Outline</button>
+
+    <div class="btn-group mt-3">
+        <button class="btn btn-primary">Left</button>
+        <button class="btn btn-primary">Middle</button>
+        <button class="btn btn-primary">Right</button>
+    </div>
+</section>
+
+<!-- Navbar -->
+<section class="mb-5">
+    <h2>Navbar</h2>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">
+                Logo
+            </a>
+
+            <button class="navbar-toggler"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link">About</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2">
+                    <button class="btn btn-success">
+                        Search
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+    </nav>
+</section>
+```
+
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
