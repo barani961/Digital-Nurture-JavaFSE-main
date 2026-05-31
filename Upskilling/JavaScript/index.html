@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .card{
+            border:1px solid #ccc;
+            padding:15px;
+            margin:10px 0;
+            border-radius:10px;
+        }
+
+        .error{
+            color:red;
+        }
+
+        #spinner{
+            display:none;
+            color:blue;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Local Community Event Portal</h1>
+
+<h3>Filter Events</h3>
+
+<select id="categoryFilter">
+    <option value="All">All</option>
+    <option value="Music">Music</option>
+    <option value="Workshop">Workshop</option>
+</select>
+
+<br><br>
+
+<input type="text"
+       id="searchBox"
+       placeholder="Search Event">
+
+<hr>
+
+<div id="spinner">
+    Loading Events...
+</div>
+
+<div id="eventContainer"></div>
+
+<hr>
+
+<h2>Event Registration Form</h2>
+
+<form id="registerForm">
+
+    <input type="text"
+           name="name"
+           placeholder="Enter Name">
+
+    <br><br>
+
+    <input type="email"
+           name="email"
+           placeholder="Enter Email">
+
+    <br><br>
+
+    <select name="event">
+        <option value="Music Festival">
+            Music Festival
+        </option>
+
+        <option value="Baking Workshop">
+            Baking Workshop
+        </option>
+    </select>
+
+    <br><br>
+
+    <button type="submit"
+            id="registerBtn">
+        Register
+    </button>
+
+</form>
+
+<p id="formError" class="error"></p>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="main.js"></script>
+
+</body>
+</html>
