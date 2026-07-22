@@ -1,0 +1,101 @@
+<div
+  class="card"
+  appHighlight="lightblue"
+  [ngClass]="cardClasses"
+  [ngStyle]="{
+    'border-left': '8px solid ' + borderColor
+  }">
+
+  <h2>{{ course.name | uppercase }}</h2>
+
+  <p>
+    <strong>Course Code:</strong>
+    {{ course.code }}
+  </p>
+
+  <p>
+    <strong>Credits:</strong>
+    {{ course.credits | creditLabel }}
+  </p>
+
+  <p>
+    <strong>Fee:</strong>
+    {{ 25000 | currency:'INR' }}
+  </p>
+
+  <p>
+    <strong>Completion:</strong>
+    {{ 87.456 | number:'1.1-2' }}%
+  </p>
+
+  <p>
+    <strong>Last Updated:</strong>
+    {{ '2026-07-22' | date:'longDate' }}
+  </p>
+
+  <div [ngSwitch]="course.gradeStatus">
+
+    <span
+      *ngSwitchCase="'passed'"
+      style="
+        color:white;
+        background:green;
+        padding:6px 10px;
+        border-radius:5px;
+      ">
+      Passed
+    </span>
+
+    <span
+      *ngSwitchCase="'failed'"
+      style="
+        color:white;
+        background:red;
+        padding:6px 10px;
+        border-radius:5px;
+      ">
+      Failed
+    </span>
+
+    <span
+      *ngSwitchDefault
+      style="
+        color:white;
+        background:gray;
+        padding:6px 10px;
+        border-radius:5px;
+      ">
+      Pending
+    </span>
+
+  </div>
+
+  <br>
+
+  <button (click)="enroll()">
+    Enroll
+  </button>
+
+  <button (click)="toggleDetails()">
+    {{ isExpanded ? 'Hide Details' : 'Show Details' }}
+  </button>
+
+  <div *ngIf="isExpanded">
+
+    <hr>
+
+    <p>
+      <strong>Course ID:</strong>
+      {{ course.id }}
+    </p>
+
+    <p>
+      This course contains practical sessions,
+      assignments and assessments.
+    </p>
+
+  </div>
+
+</div>
+
+<hr>

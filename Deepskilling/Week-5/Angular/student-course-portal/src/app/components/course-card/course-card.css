@@ -1,0 +1,41 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 15px 0;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Applied when course is enrolled */
+.card--enrolled {
+  background-color: #e8f5e9;
+  border-color: #4caf50;
+}
+
+/* Applied when credits >= 4 */
+.card--full {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Applied when Show Details is clicked */
+.expanded {
+  min-height: 260px;
+}
+
+button {
+  margin-right: 10px;
+  margin-top: 12px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+span {
+  display: inline-block;
+  margin: 10px 0;
+  font-weight: bold;
+}
