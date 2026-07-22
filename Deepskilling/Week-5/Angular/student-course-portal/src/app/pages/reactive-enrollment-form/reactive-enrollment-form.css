@@ -1,0 +1,73 @@
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    display: block;
+}
+
+.info {
+    color: blue;
+    font-size: 13px;
+    display: block;
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+    border: 2px solid red;
+}
+
+input.ng-valid.ng-touched,
+select.ng-valid.ng-touched {
+    border: 2px solid green;
+}
+
+h3 {
+    margin-top: 25px;
+}
+
+form div {
+    margin-bottom: 12px;
+}
